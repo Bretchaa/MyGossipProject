@@ -1,0 +1,12 @@
+<h3>Bienvenue cher utilisateur!</h3>
+  <% Gossip.all.each do |gossip| %>
+    <div class="col p-1 d-flex justify-content-left">
+      <div class="card h-20 w-aut text-center" style="width: 30rem ">
+        <div class="card-body">
+          <h4 class="card-title"><%= gossip.content %></h4>
+          <p class="card-text"><%= gossip.author%></p>
+          <%= link_to "Afficher le potin", gossip_path(gossip.id), class: "card-link link_gossip"%>
+        </div>
+      </div>
+    </div>
+  <% end %>

@@ -1,0 +1,6 @@
+<body>
+<%my_gossip = Gossip.find(params[:id])%>
+    <h4> Content: <%= my_gossip.content%></h4>
+    <h5 > Auteur: <%= link_to "#{my_gossip.author}", author_path(my_gossip.author), class:"author"%></h5>
+    <p> Créé le: <%= my_gossip.created_at.strftime("%d/%m/%Y à %Hh%M")%></p>
+</body>
